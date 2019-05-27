@@ -6,6 +6,10 @@ Write-Output "Katso kansiosta scanthrough.log"
 
 Get-ChildItem . -Filter *$whatfiles* |
 Select-String -Pattern $keyWord -AllMatches -SimpleMatch |
-Foreach-Object {$_.Line} |
+Foreach-Object {
+
+$_.Line + "|" + $nametest
+
+} |
 Out-File .\scanthrough.log
 }
