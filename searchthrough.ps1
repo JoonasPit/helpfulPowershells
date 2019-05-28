@@ -9,8 +9,8 @@ Foreach ($kw in $keyWord)
     Get-Childitem -Filter *$whatfiles* -Recurse | 
     Select-String -Pattern "$kw" | 
 
-    Select line, Path,LineNumber,@{n='KeyWord';e={ $kw }
+    Select @{n='KeyWord';e={ $kw }
 
-    } | Out-File .\scanthrough.log
+    }, line, LineNumber ,Path | Out-File .\scanthrough.log
 } 
 }
