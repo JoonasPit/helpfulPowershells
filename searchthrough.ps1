@@ -48,10 +48,10 @@ Function searchthrough
         Foreach ($kw in $keyWord)
             {
                 # Select new match 
-                Get-Childitem -Filter *$whatfiles* -Recurse | 
+                Get-Childitem -Filter *$whatfiles* -Recurse -Exclude *.doc* | 
                 Select-String -Pattern "$kw" | 
                 # What was searched, the line that was found, on which line this can be found, and path to file
-                Select @{n='KeyWord';e={ $kw }}, line, LineNumber , Path | 
+                Select Path, @{n='KeyWord';e={ $kw }}, LineNumber, line | 
 
         # Output file alter name @ the $outputfile variable to get different files
         Out-File .\$outputfile
