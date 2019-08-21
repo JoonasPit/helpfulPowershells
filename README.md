@@ -12,3 +12,6 @@ I wrote searchthough.ps1 based off an old script I found. A nice use case for th
 
 ## Create-password
 By running this the user can create a completely random password with their own computer, with no need to rely on creativity or untrustworthy websites to create said password.
+
+## Openportest
+This one sends a simple TCP-request to a specified port in a specified location to check if the server responds to tcp-requests. A successful run responds with no response and an unsuccessful one respons with a powershell error message.
