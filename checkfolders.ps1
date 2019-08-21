@@ -1,6 +1,6 @@
 Function testifdir{
  $getInVar = Get-ChildItem
- $pathtoSelf = C:\Users\B713449\Documents\ps_scripts\errorlogtest.ps1
+ $pathtoSelf = path\to\self
 
  # Run through the list of items in the folder
 
