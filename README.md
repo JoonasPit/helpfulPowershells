@@ -16,5 +16,9 @@ By running this the user can create a completely random password with their own 
 
 ## Openportest
 This one sends a simple TCP-request to a specified port in a specified location to check if the server responds to tcp-requests. A successful run responds with no response and an unsuccessful one respons with a powershell error message.
+
 ## Zipfiles
 Compress files lying around in a folder to a single folder. Use the variables to specify specific files to compress or, say define a filetype inside a folder eg. "*.txt"
+
+## Powershell mailing tool
+Used to send run failure messages from powershellscripts to notify users of the run failure.
