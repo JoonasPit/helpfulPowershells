@@ -8,8 +8,12 @@ This repository contains simple powershell scripts. Some useful some less useful
 ## Zipfiles
 Compress files lying around in a folder to a single folder. Use the variables to specify specific files to compress or, say define a filetype inside a folder eg. "*.txt"
 
-## checkFileExistance
-Run through array of files twice with a wait to see if there's a delay in a prior job that creates files. Used with Informatica prior to a data loading phase to see if files exist. Throws an error and logs which file was missing.
+## poll_and_move_files
+- Create a separate file with paths to all transferrable files
+- First row of file should be the location of a loggingfolder
+- Runs with 
+  <code>powershell -command \\path\to\file -sourceFileList "\\path\to\list\of\files" -newDestination "\\path\to\destination" </code>
+- Used with Informatica to check file-existance and make .csv-files move only if they exist prior to workflow runs.
 
 ## Searchthrough
 I wrote searchthough.ps1 based off an old script I found. A nice use case for the script would be filtering through log files for error messages. The script writes out all lines containing a user specified keyword from all the files in a folder that the user can also specify e.g searching all 'log' files for the keyword 'error'.
