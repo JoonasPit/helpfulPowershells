@@ -30,7 +30,7 @@ function somethingWentWrong($errormessage){
 }
 
 try{
-    Set-DefaultAWSRegion -Region eu-central-1
+    Set-DefaultAWSRegion -Region your_region
     Set-AWSCredentials -ProfileName YourProfileName -ProfileLocation Your/ProfileLocation
 }catch{
     $errormessage = $_
