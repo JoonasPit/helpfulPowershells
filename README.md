@@ -5,6 +5,12 @@ Windows Powershell scripting
 ## What this repo contains
 This repository contains simple powershell scripts. Some useful some less useful. Most of them were written while at work to help with my daily tasks.
 
+## WriteFilesToS3
+Writes Files from a folder to S3 needs credentials etc to work.
+
+## WriteFileToUtf8
+A Script used due to a bad powershell version on a server. Re-writes files to UTF-8
+
 ## Zipfiles
 Compress files lying around in a folder to a single folder. Use the variables to specify specific files to compress or, say define a filetype inside a folder eg. "*.txt"
 
